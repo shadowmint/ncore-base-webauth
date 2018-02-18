@@ -1,0 +1,22 @@
+{
+  "name": "NCore.Base.WebAuth",
+  "version": "1.0.0",
+  "description": "Consistent web auth for .net core",
+  "main": "index.js",
+  "files": [
+    "lib",
+    "scripts"
+  ],
+  "scripts": {
+    "test": "dotnet build /t:restore && dotnet test ./NCore.Base.WebAuthTests/NCore.Base.WebAuthTests.csproj",
+    "build": "dotnet clean && dotnet build /t:restore && dotnet pack --include-symbols --include-source && rm -f lib/*.nupkg && find NCore.Base.WebAuth/* -name *.nupkg -exec cp {} lib \\;",
+    "demo": "cd NCore.Base.WebAuthDemo && dotnet run",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0"
+  }
+}
