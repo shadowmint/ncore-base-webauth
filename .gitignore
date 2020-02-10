@@ -290,3 +290,6 @@ __pycache__/
 *.xsd.cs
 
 # End of https://www.gitignore.io/api/csharp
+
+# project files
+old

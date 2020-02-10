@@ -8,6 +8,6 @@ namespace NCore.Base.WebAuth
   {
     IAuthServiceBuilder AddPolicy<T>() where T : IPolicy;
     IAuthServiceBuilder AddPolicy(IPolicy policy);
-    IAuthService Build(IServiceCollection services);
+    IAuthService AddAuthorization(IServiceCollection services);
   }
 }

@@ -27,6 +27,7 @@ namespace NCore.Base.WebAuth.Demo.Controllers
       return Ok("Logged out!");
     }
 
+    [Authorize]
     public IActionResult Claims()
     {
       var claims = $"User: {HttpContext.User.Identity.Name} (Auth: {HttpContext.User.Identity.IsAuthenticated})";

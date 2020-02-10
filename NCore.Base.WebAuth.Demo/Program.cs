@@ -20,6 +20,11 @@ namespace NCore.Base.WebAuth.Demo
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .ConfigureLogging(i =>
+                {
+                    i.AddConsole();
+                    i.SetMinimumLevel(LogLevel.Debug);
+                })
                 .Build();
     }
 }

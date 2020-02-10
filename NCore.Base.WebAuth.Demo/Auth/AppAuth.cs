@@ -3,7 +3,7 @@
   public static class AppAuth
   {
     // Identity and cookie name
-    public static string IdentityScheme = "DemoIdentity";
+    public const string IdentityScheme = "DemoIdentity";
     
     // Types of user values; each value should match a claim type
     public const string UserType = "UserType";
